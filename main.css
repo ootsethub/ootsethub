@@ -1,0 +1,275 @@
+html *, body { 
+	font-size:16px;
+	margin:0px;
+	padding:0px;
+	font-family:"Verdana";
+}
+a {
+	text-decoration:none;
+}
+.panel-heading {
+	padding:0px;
+}
+.panel-body {
+	padding:5px;
+}
+.headpanel {
+	display:grid;
+	grid-template-columns: auto repeat(5, 20px);
+}
+.title {
+	grid-column-start:1;
+	grid-column-end:2;
+/*.accuracy {
+	grid-column-start:2;
+	grid-column-end:3;
+	background-color:salmon;
+	font-size:20px;
+	width:1%;
+	text-align:right;
+	position:absolute;
+	display:inline;
+	padding:0px;
+	line-height:1;
+	margin:0px;*/
+}
+
+.rating {
+	padding-left:5px;
+}
+.favorite {
+	padding-left:5px;
+}
+
+.level-1 {
+	background-color:lightgreen;
+	background: linear-gradient(to bottom right, #00db0b, lightgreen, #00db0b);
+}
+.level-2 {
+	background-color:lightblue;
+	background: linear-gradient(to bottom right, #73a4ff, lightblue, #73a4ff);
+}
+.level-3 {
+	background-color:gold;
+	background: linear-gradient(to bottom right, gold, yellow, gold);
+}
+.level-4 {
+	background-color:salmon;
+	background: linear-gradient(to bottom right, #ff1c1c, salmon, #ff1c1c);
+}
+.level-5 {
+	background-color:gray;
+	background: linear-gradient(to bottom right, #666, #999, #666);
+}
+.fig .overlay {
+	position:relative;
+	right:20px;
+	font-size:28px;
+	top:0px;
+	vertical-align:top;
+	color:white;
+	text-shadow: 0 0 3px black;
+}
+.card .fig img {
+	width:300px;
+}
+.full .fig img {
+	width:300px;
+}
+.card .overlay {
+	display:none;
+}
+.full .fig {
+	padding-bottom:5px;
+}
+a {
+	font-weight:bold;
+}
+
+.z, .r {
+	background-color:slategray;
+	color:white;
+	padding:2px;
+}
+.r {
+	border-radius:0px 6px 0px 0px;
+}
+em {
+	font-style:normal;
+	font-weight:bold;
+}
+
+.card .figures {
+	display:grid;
+	grid-template-columns:repeat(2, 1fr);
+}
+.full .figures {
+	display:grid;
+	grid-template-rows:repeat(2, 1fr);
+}
+.ruleset , .version{
+	padding:2px;
+	margin-left:3px;
+	margin-right:3px;
+	border-radius: 3px;
+	background-color:teal;
+	color:white;
+	font-size:10px;
+}
+
+.infotable td {
+	padding:2px;
+	padding-left:5px;
+	padding-right:5px;
+}
+.infotable {
+	border-spacing:2px;
+	border-collapse:separate;
+}
+.infotable td:first-child {
+	font-weight:bold;
+	background-color:#eee;
+}
+.infotable .sep td {
+	background-color:white;
+}
+.container {
+	display:grid;
+	grid-template-columns: 350px auto;
+}
+.c_right {
+	display:grid;
+	grid-template-columns: auto auto ;
+	grid-template-rows: auto auto;
+	}
+.detail {
+	grid-column: 1 / span 2;
+}
+
+.panel-primary {
+}
+
+.full .panel-heading {
+	font-size: 18px;
+	font-weight:bold;
+	background-color:lightgray;
+	padding:2px;
+	padding-left:5px;
+}
+div.panel-body.card {
+	display:grid;
+	grid-template-columns:330px auto;
+}
+.card .panel-heading, .home .panel-heading {
+	background-color:lightgray;
+	padding:1px;
+	padding-left: 5px;
+}
+.panel-body {
+	padding:10px;
+}
+
+.nav li {
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	display:inline;
+}
+.nav ul {
+	padding:0px;
+	margin:0px;
+}
+.nav {
+	margin:0px;
+	border-bottom:1px solid gray;
+	margin-bottom:5px;
+	background-image: linear-gradient(white, lightgray);
+	padding:3px;
+}
+input {
+	border-radius:0px;
+	background-color:white;
+	color:black;
+	padding:2px;
+	caret-color:black;
+}
+input::selection {
+	background-color:#eee;
+}
+h1 {
+	font-size:20px;
+	margin:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.logo {
+	font-weight:bold;
+}
+
+.heading {
+	font-size:48px;
+	font-weight:bold;
+	margin-top:20px;
+	align:center;
+}
+.home {
+	text-align:center;
+	padding-top:25px;
+}
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; 
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+/*  width: 120px;*/
+  font-size:14px;
+  background-color: #fff;
+  text-align: center;
+  border:1px solid black;
+/*  padding: 5px 0;
+ *
+  border-radius: 6px;*/
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow *//*
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}*/
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.index {
+	margin-top:80px;
+	text-align:left;
+}
+.index ul {
+	columns:3;
+	list-style-type:none;
+}
+.index ul ul {
+	columns:1;
+}
+.index ul ul li {
+	padding-left:20px;
+}

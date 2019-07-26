@@ -1,0 +1,59 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>OoT SetHub</title>
+		<script src="core.js"></script>
+		<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen">-->
+		<link rel="stylesheet" type="text/css" href="main.css" media="screen">
+		<script src="ui.js"></script>
+		<script type="text/javascript">
+			window.onhashchange = changePage;
+			window.addEventListener("keydown",function (e) {
+				if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) { 
+					e.preventDefault();
+
+					location.hash = "";
+					$('#search').focus();
+					$('#search').select();
+				}
+				if(e.keyCode == 27) {
+					$('#search').val("");
+					$('#search').focus();
+					$('#search').select();
+					location.hash = "";
+					changePage();
+				}
+				if(e.keyCode == 13 && results.length>0) {
+					e.preventDefault();
+					location.hash = results[0].id;
+					changePage();
+				}
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="nav">
+			<ul> 
+				<li class="nav-item logo"><a href="#">SetHub</a></li>
+				<li class="nav-item"><input type="text" oninput="changePage()" id="search"></li>
+			</ul>
+		</div>
+		<div id="content" >
+		</div>
+		<script src="overworld.js"></script>
+		<script src="fire.js"></script>
+		<script src="water.js"></script>
+		<script src="ice.js"></script>
+		<script src="basic.js"></script>
+		<script src="forest.js"></script>
+		<script src="dc.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			initData();
+			changePage();
+		</script>
+	</body>
+</html>
